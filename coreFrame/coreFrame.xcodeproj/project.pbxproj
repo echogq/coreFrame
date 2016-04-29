@@ -16,6 +16,7 @@
 		1899FF3C1CD2EEB8006963E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1899FF3A1CD2EEB8006963E6 /* LaunchScreen.storyboard */; };
 		1899FF471CD2EEB9006963E6 /* coreFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899FF461CD2EEB9006963E6 /* coreFrameTests.swift */; };
 		1899FF521CD2EEB9006963E6 /* coreFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899FF511CD2EEB9006963E6 /* coreFrameUITests.swift */; };
+		18A076921CD32F1E008F9558 /* Frame+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A076911CD32F1E008F9558 /* Frame+Define.swift */; };
 		DFCB5A06838FC5C593CABCC2 /* Pods_coreFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F112521813A6213DF0AA759 /* Pods_coreFrame.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		1899FF4D1CD2EEB9006963E6 /* coreFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coreFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1899FF511CD2EEB9006963E6 /* coreFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreFrameUITests.swift; sourceTree = "<group>"; };
 		1899FF531CD2EEB9006963E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A076911CD32F1E008F9558 /* Frame+Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Frame+Define.swift"; sourceTree = "<group>"; };
 		1C29BBBFB1012BA70F83A1F1 /* Pods-coreFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coreFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coreFrame/Pods-coreFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		9F112521813A6213DF0AA759 /* Pods_coreFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coreFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9A79180B02D9D8C6D3B2F8 /* Pods-coreFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coreFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-coreFrame/Pods-coreFrame.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		18A0768F1CD32CF2008F9558 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				18A076911CD32F1E008F9558 /* Frame+Define.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1899FF311CD2EEB8006963E6 /* ViewController.swift in Sources */,
+				18A076921CD32F1E008F9558 /* Frame+Define.swift in Sources */,
 				185461CA1CD308CC00D5C66B /* CrashTestController.swift in Sources */,
 				1899FF2F1CD2EEB8006963E6 /* AppDelegate.swift in Sources */,
 				1899FF371CD2EEB8006963E6 /* coreFrame.xcdatamodeld in Sources */,
