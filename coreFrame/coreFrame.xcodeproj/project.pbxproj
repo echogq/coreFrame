@@ -116,6 +116,10 @@
 		1899FF2D1CD2EEB8006963E6 /* coreFrame */ = {
 			isa = PBXGroup;
 			children = (
+				18A076901CD32D02008F9558 /* utils */,
+				18A0768F1CD32CF2008F9558 /* common */,
+				18A0768D1CD32CD1008F9558 /* model */,
+				18A0768E1CD32CD1008F9558 /* view */,
 				185461C81CD308B600D5C66B /* controller */,
 				1899FF2E1CD2EEB8006963E6 /* AppDelegate.swift */,
 				1899FF301CD2EEB8006963E6 /* ViewController.swift */,
@@ -144,6 +148,34 @@
 				1899FF531CD2EEB9006963E6 /* Info.plist */,
 			);
 			path = coreFrameUITests;
+			sourceTree = "<group>";
+		};
+		18A0768D1CD32CD1008F9558 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		18A0768E1CD32CD1008F9558 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		18A0768F1CD32CF2008F9558 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		18A076901CD32D02008F9558 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		20533EABBEBA3138A9B6F0E0 /* Frameworks */ = {
