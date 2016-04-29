@@ -19,9 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.window = UIWindow();
-        self.window?.frame=UIScreen.mainScreen().bounds;
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("ViewController")
+
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         self.window?.backgroundColor=UIColor.whiteColor()
+        
         Fabric.with([Crashlytics.self])
         return true
     }
