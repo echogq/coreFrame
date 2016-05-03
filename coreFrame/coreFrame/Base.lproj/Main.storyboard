@@ -24,13 +24,23 @@
                                     <action selector="clickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8La-ks-xYX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwI-L3-IYG">
+                                <rect key="frame" x="261" y="323" width="78" height="36"/>
+                                <state key="normal" title="Socket实例"/>
+                                <connections>
+                                    <action selector="clickSocketBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oT6-yA-Q7E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZJ3-jx-SHf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EcM-JP-vFA"/>
                             <constraint firstItem="ZJ3-jx-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HuG-PS-ieA"/>
                             <constraint firstItem="ZJ3-jx-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEi-T9-wDA"/>
+                            <constraint firstItem="fwI-L3-IYG" firstAttribute="centerX" secondItem="ZJ3-jx-SHf" secondAttribute="centerX" id="dVj-Oe-4CI"/>
                             <constraint firstItem="ZJ3-jx-SHf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hwS-zI-U4t"/>
+                            <constraint firstItem="fwI-L3-IYG" firstAttribute="top" secondItem="ZJ3-jx-SHf" secondAttribute="bottom" constant="8" symbolic="YES" id="nwx-Mk-V93"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fwI-L3-IYG" secondAttribute="bottom" constant="197" id="pk6-Cf-dAQ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

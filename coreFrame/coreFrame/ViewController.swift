@@ -27,5 +27,10 @@ class ViewController: UIViewController {
         return
     }
 
+    @IBAction func clickSocketBtn(sender: UIButton) {
+        let vc = SocketViewController()
+        self.presentViewController(vc, animated: true) {}
+        return
+    }
 }
 

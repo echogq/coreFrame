@@ -17,9 +17,11 @@ def pods
     pod 'INSImageView', '~> 0.1.5'
     pod 'CXSwipeGestureRecognizer', '~> 1.0.2'
     pod 'Shimmer', '~> 1.0.2'
-    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    #pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'SwiftyJSON'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'CocoaAsyncSocket'
     pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 end
 
