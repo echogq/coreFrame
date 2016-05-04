@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var crashViewBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,6 +32,9 @@ class ViewController: UIViewController {
         let vc = SocketViewController()
         self.presentViewController(vc, animated: true) {}
         return
+    }
+    @IBAction func clickTableView(sender: UIButton) {
+        
     }
 }
 
