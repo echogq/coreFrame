@@ -63,6 +63,13 @@
                                     <action selector="clickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8La-ks-xYX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xU-78-PhF">
+                                <rect key="frame" x="20" y="175" width="560" height="30"/>
+                                <state key="normal" title="navigation组件"/>
+                                <connections>
+                                    <segue destination="HCK-vJ-MJa" kind="show" id="vKJ-4r-7h3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,10 +81,13 @@
                             <constraint firstItem="986-qz-vEf" firstAttribute="width" secondItem="ZJ3-jx-SHf" secondAttribute="width" id="OHb-vd-huP"/>
                             <constraint firstItem="986-qz-vEf" firstAttribute="centerX" secondItem="uXK-JU-5YW" secondAttribute="centerX" id="Uao-pr-s7j"/>
                             <constraint firstItem="uXK-JU-5YW" firstAttribute="width" secondItem="ZJ3-jx-SHf" secondAttribute="width" id="UpQ-fF-4d9"/>
+                            <constraint firstItem="0xU-78-PhF" firstAttribute="trailing" secondItem="986-qz-vEf" secondAttribute="trailing" id="aeT-O2-c5P"/>
                             <constraint firstItem="uXK-JU-5YW" firstAttribute="height" secondItem="ZJ3-jx-SHf" secondAttribute="height" id="cMU-W0-LPp"/>
+                            <constraint firstItem="0xU-78-PhF" firstAttribute="leading" secondItem="986-qz-vEf" secondAttribute="leading" id="eAI-nj-0Jg"/>
                             <constraint firstItem="986-qz-vEf" firstAttribute="width" secondItem="uXK-JU-5YW" secondAttribute="width" id="gb6-k7-B9X"/>
                             <constraint firstItem="986-qz-vEf" firstAttribute="height" secondItem="ZJ3-jx-SHf" secondAttribute="height" id="hZz-Ue-qe2"/>
                             <constraint firstItem="ZJ3-jx-SHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="io9-1e-Ezw"/>
+                            <constraint firstItem="0xU-78-PhF" firstAttribute="top" secondItem="986-qz-vEf" secondAttribute="bottom" constant="49" id="y7r-oE-D0T"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -118,7 +128,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxs-ph-MfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="13"/>
+            <point key="canvasLocation" x="427" y="-601"/>
+        </scene>
+        <!--Navi View Controller-->
+        <scene sceneID="sBq-99-sYQ">
+            <objects>
+                <navigationController id="HCK-vJ-MJa" customClass="NaviViewController" customModule="coreFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcU-Nv-t7g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LN4-cC-JCE" kind="relationship" relationship="rootViewController" id="z6b-yf-1Ja"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmN-KD-VYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="120"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KBj-mG-LbP">
+            <objects>
+                <viewController id="LN4-cC-JCE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tWu-uZ-EYn"/>
+                        <viewControllerLayoutGuide type="bottom" id="QNr-lv-loQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sbh-cd-5de">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vVQ-kF-dgL">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="fnK-0D-9cW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="jkI-eE-MqC"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TE5-ly-d1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="134"/>
         </scene>
     </scenes>
 </document>
