@@ -62,24 +62,30 @@ class ChatViewController: UIViewController,GCDAsyncSocketDelegate {
                 }
             }else{
                 SVProgressHUD.showErrorWithStatus("服务器未连接")
-                print("服务器未连接")
             }
         }else{
             SVProgressHUD.showErrorWithStatus("先点击连接服务器")
         }
     }
     
+    @IBAction func checkConnectStatus(sender: UIButton) {
+        if let _ = clientSocket{
+            if(clientSocket.isConnected){
+                connectStatus.text = "\(serverAddres):\(serverPort) 连接成功"
+            }else{
+                connectStatus.text = "\(serverAddres):\(serverPort) 连接失败"
+            }
+        }else{
+            connectStatus.text = "\(serverAddres):\(serverPort) 未连接"
+        }
+
+    }
     func initClient(){
         do{
             clientSocket = GCDAsyncSocket()
             clientSocket.delegate = self
             clientSocket.delegateQueue = dispatch_get_global_queue(0, 0)
             try clientSocket.connectToHost(serverAddres, onPort: serverPort)
-            if clientSocket.isConnected {
-                connectStatus.text = "\(serverAddres):\(serverPort)连接成功"
-            }else{
-                connectStatus.text = "\(serverAddres):\(serverPort)连接失败"
-            }
         }catch{
             print("connet to server errror")
             connectStatus.text = "\(serverAddres):\(serverPort)连接失败"
@@ -87,7 +93,7 @@ class ChatViewController: UIViewController,GCDAsyncSocketDelegate {
     }
     
     func socket(sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
-        print("与服务器连接成功！")
+        connectStatus.text = "\(serverAddres):\(serverPort) 连接成功"
         clientSocket.readDataWithTimeout(-1, tag: 0)
     }
     /**
@@ -97,7 +103,7 @@ class ChatViewController: UIViewController,GCDAsyncSocketDelegate {
      - parameter err:  错误消息
      */
     func socketDidDisconnect(sock: GCDAsyncSocket!, withError err: NSError!){
-         print("与服务器断开连接")
+         connectStatus.text = "与服务器\(serverAddres)断开连接"
     }
     /**
      接收数据处理
@@ -115,10 +121,10 @@ class ChatViewController: UIViewController,GCDAsyncSocketDelegate {
         dispatch_async(mainQueue, {
             
             let showStr: NSMutableString = NSMutableString()
-            //showStr.appendString(self.msgView.text)
+            showStr.appendString(self.resultBox.text)
             showStr.appendString(readClientDataString! as String)
             showStr.appendString("\n")
-            //self.msgView.text = showStr as String
+            self.resultBox.text = showStr as String
             
         })
         

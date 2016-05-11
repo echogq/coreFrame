@@ -151,22 +151,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxx-QY-Ne0">
-                                <rect key="frame" x="118" y="92" width="462" height="30"/>
-                                <color key="backgroundColor" red="0.19448939707739221" green="0.4255692112014382" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="连接">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-Zt-3Gi">
+                                <rect key="frame" x="447" y="182" width="133" height="30"/>
+                                <color key="backgroundColor" red="0.19448939709999999" green="0.42556921120000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="1ii-BQ-wPV"/>
+                                </constraints>
+                                <state key="normal" title="发送数据">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="connectServer:" destination="Eys-42-fY0" eventType="touchUpInside" id="krH-py-wn0"/>
+                                    <action selector="sendDataToServer:" destination="Eys-42-fY0" eventType="touchUpInside" id="zO8-uA-KaH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="连接状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzP-Ji-2Qv">
@@ -193,57 +193,83 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-Zt-3Gi">
-                                <rect key="frame" x="447" y="182" width="133" height="30"/>
-                                <color key="backgroundColor" red="0.19448939709999999" green="0.42556921120000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-gd-XPN">
+                                <rect key="frame" x="480" y="92" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="133" id="1ii-BQ-wPV"/>
+                                    <constraint firstAttribute="width" constant="100" id="LkK-eW-oKY"/>
                                 </constraints>
-                                <state key="normal" title="发送数据">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="检查连接状态">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="sendDataToServer:" destination="Eys-42-fY0" eventType="touchUpInside" id="zO8-uA-KaH"/>
+                                    <action selector="checkConnectStatus:" destination="Eys-42-fY0" eventType="touchUpInside" id="tKv-n1-Anf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxx-QY-Ne0">
+                                <rect key="frame" x="118" y="92" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.19448939707739221" green="0.4255692112014382" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="W6I-OX-uuE"/>
+                                </constraints>
+                                <state key="normal" title="连接服务器">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectServer:" destination="Eys-42-fY0" eventType="touchUpInside" id="krH-py-wn0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwG-4c-Cca">
+                                <rect key="frame" x="217" y="92" width="264" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WXA-Zt-3Gi" firstAttribute="leading" secondItem="uEr-V1-5jD" secondAttribute="trailing" constant="8" symbolic="YES" id="2Xl-Aj-pjN"/>
                             <constraint firstItem="45v-ou-ivh" firstAttribute="leading" secondItem="SzP-Ji-2Qv" secondAttribute="trailing" constant="21" id="3Yx-yp-q34"/>
-                            <constraint firstItem="FhW-Oi-IjQ" firstAttribute="leading" secondItem="hxx-QY-Ne0" secondAttribute="leading" id="4b7-lT-PJf"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="bottom" secondItem="cwG-4c-Cca" secondAttribute="bottom" id="4z1-dg-8x4"/>
                             <constraint firstItem="HvM-8e-dwf" firstAttribute="top" secondItem="wor-JO-nxl" secondAttribute="bottom" id="7LY-cJ-0Mt"/>
+                            <constraint firstItem="LEU-gd-XPN" firstAttribute="trailing" secondItem="WXA-Zt-3Gi" secondAttribute="trailing" id="8P0-NU-L2y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EK8-r4-xDv" secondAttribute="trailing" constant="5" id="AWG-1c-qYZ"/>
                             <constraint firstItem="HvM-8e-dwf" firstAttribute="leading" secondItem="FhW-Oi-IjQ" secondAttribute="leading" id="Arn-cE-2d3"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="top" secondItem="FhW-Oi-IjQ" secondAttribute="bottom" constant="8" symbolic="YES" id="AsT-a9-m7U"/>
                             <constraint firstItem="SzP-Ji-2Qv" firstAttribute="baseline" secondItem="45v-ou-ivh" secondAttribute="baseline" id="Bmd-c0-ZMa"/>
                             <constraint firstItem="HvM-8e-dwf" firstAttribute="trailing" secondItem="FhW-Oi-IjQ" secondAttribute="trailing" id="DIT-pW-nFC"/>
                             <constraint firstItem="HvM-8e-dwf" firstAttribute="leading" secondItem="yjQ-3Q-Mix" secondAttribute="trailing" constant="13" id="GjC-xX-1vN"/>
-                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="trailing" secondItem="WXA-Zt-3Gi" secondAttribute="trailing" id="JcO-8M-QKv"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="leading" secondItem="FhW-Oi-IjQ" secondAttribute="leading" id="JCR-Ry-SaY"/>
+                            <constraint firstItem="45v-ou-ivh" firstAttribute="top" secondItem="hxx-QY-Ne0" secondAttribute="bottom" constant="31" id="JuI-DH-2OC"/>
                             <constraint firstItem="yjQ-3Q-Mix" firstAttribute="leading" secondItem="VBc-A8-Jh1" secondAttribute="leadingMargin" id="NkW-0O-VZr"/>
+                            <constraint firstItem="cwG-4c-Cca" firstAttribute="centerX" secondItem="FhW-Oi-IjQ" secondAttribute="centerX" id="Paf-oI-aLK"/>
                             <constraint firstItem="yjQ-3Q-Mix" firstAttribute="top" secondItem="wor-JO-nxl" secondAttribute="bottom" constant="8" symbolic="YES" id="Sxk-CM-PAo"/>
-                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="leading" secondItem="VBc-A8-Jh1" secondAttribute="leadingMargin" constant="98" id="TFl-Vc-2Gq"/>
                             <constraint firstItem="EK8-r4-xDv" firstAttribute="leading" secondItem="uEr-V1-5jD" secondAttribute="leading" id="WgR-gc-Rqe"/>
-                            <constraint firstItem="FhW-Oi-IjQ" firstAttribute="trailing" secondItem="hxx-QY-Ne0" secondAttribute="trailing" id="XrH-jg-TUU"/>
                             <constraint firstItem="EK8-r4-xDv" firstAttribute="top" secondItem="uEr-V1-5jD" secondAttribute="bottom" constant="24" id="ZTW-gM-0Y2"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="leading" secondItem="VBc-A8-Jh1" secondAttribute="leadingMargin" constant="98" id="Zy3-Bb-KJ8"/>
                             <constraint firstItem="SzP-Ji-2Qv" firstAttribute="leading" secondItem="uEr-V1-5jD" secondAttribute="leading" id="a0S-xO-388"/>
                             <constraint firstItem="yjQ-3Q-Mix" firstAttribute="leading" secondItem="SzP-Ji-2Qv" secondAttribute="leading" id="afG-uq-zfQ"/>
                             <constraint firstItem="tzQ-oc-7aw" firstAttribute="top" secondItem="EK8-r4-xDv" secondAttribute="bottom" constant="84" id="b46-I7-vOH"/>
-                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="top" secondItem="FhW-Oi-IjQ" secondAttribute="bottom" constant="8" symbolic="YES" id="byC-R9-fnp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwG-4c-Cca" secondAttribute="trailing" constant="99" id="cvf-oo-Nv3"/>
                             <constraint firstItem="HvM-8e-dwf" firstAttribute="trailing" secondItem="VBc-A8-Jh1" secondAttribute="trailingMargin" id="ex9-Fz-CNq"/>
-                            <constraint firstItem="45v-ou-ivh" firstAttribute="top" secondItem="hxx-QY-Ne0" secondAttribute="bottom" constant="31" id="ez2-9h-dMZ"/>
                             <constraint firstItem="Lnq-Qz-hcP" firstAttribute="top" secondItem="yjQ-3Q-Mix" secondAttribute="bottom" constant="8" symbolic="YES" id="fNe-vR-vlJ"/>
                             <constraint firstItem="uEr-V1-5jD" firstAttribute="top" secondItem="SzP-Ji-2Qv" secondAttribute="bottom" constant="8" symbolic="YES" id="g0c-C0-Oye"/>
                             <constraint firstItem="Lnq-Qz-hcP" firstAttribute="leading" secondItem="VBc-A8-Jh1" secondAttribute="leadingMargin" constant="5" id="lY0-Tm-Igr"/>
                             <constraint firstItem="yjQ-3Q-Mix" firstAttribute="trailing" secondItem="Lnq-Qz-hcP" secondAttribute="trailing" id="nfE-iR-CDF"/>
+                            <constraint firstItem="LEU-gd-XPN" firstAttribute="trailing" secondItem="FhW-Oi-IjQ" secondAttribute="trailing" id="qLY-6B-hGO"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="baseline" secondItem="LEU-gd-XPN" secondAttribute="baseline" id="qc5-Bb-Iu9"/>
                             <constraint firstItem="uEr-V1-5jD" firstAttribute="top" secondItem="WXA-Zt-3Gi" secondAttribute="top" id="v9x-sy-h4O"/>
+                            <constraint firstItem="hxx-QY-Ne0" firstAttribute="top" secondItem="cwG-4c-Cca" secondAttribute="top" id="wh7-ED-r5i"/>
                             <constraint firstItem="Lnq-Qz-hcP" firstAttribute="baseline" secondItem="FhW-Oi-IjQ" secondAttribute="baseline" id="y6q-fq-ZNO"/>
                         </constraints>
                     </view>
