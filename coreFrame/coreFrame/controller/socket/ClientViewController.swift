@@ -8,19 +8,44 @@
 
 import UIKit
 
-class ClientViewController: UIViewController {
+class ClientViewController: UIViewController, SocketClientDelegate{
 
+    let hostName = "127.0.0.1"
+    let hostPort:UInt16 = 10186
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        SocketClient.sharedInstance.connectWithHost(hostName, port: hostPort)
+        sendData("test");
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func didConnectWithError(error:NSError) -> Void{
+        print(error.localizedDescription)
+    }
+    
+    func didConnectToHost(host:String, port:UInt16) -> Void{
+        print("connect success")
+    }
+    
+    func didReceiveData(data:NSData, tag:UInt) -> Void{
+        // 1 获取客户的发来的数据 ，把 NSData 转 NSString
+        let readClientDataString: NSString? = NSString(data: data, encoding: NSUTF8StringEncoding)
+        print(readClientDataString!)
+    }
+    
+    func sendData(msg:String){
+        let serviceStr: NSMutableString = NSMutableString()
+        serviceStr.appendString(msg)
+        serviceStr.appendString("\n")
+        SocketClient.sharedInstance.writeData(serviceStr.dataUsingEncoding(NSUTF8StringEncoding)!, timeout: -1, tag: 0)
+    }
 
     /*
     // MARK: - Navigation

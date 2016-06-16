@@ -12,6 +12,7 @@
 		185461CA1CD308CC00D5C66B /* CrashTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185461C91CD308CC00D5C66B /* CrashTestController.swift */; };
 		1861FF011CD8D73B00ECD4A1 /* TableViewSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861FF001CD8D73B00ECD4A1 /* TableViewSourceController.swift */; };
 		1861FF051CD8D9F600ECD4A1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861FF041CD8D9F600ECD4A1 /* TableViewController.swift */; };
+		186E43F21CE68F9800AA4685 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E43F11CE68F9800AA4685 /* LayoutViewController.swift */; };
 		1899FF2F1CD2EEB8006963E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899FF2E1CD2EEB8006963E6 /* AppDelegate.swift */; };
 		1899FF311CD2EEB8006963E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899FF301CD2EEB8006963E6 /* ViewController.swift */; };
 		1899FF341CD2EEB8006963E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1899FF321CD2EEB8006963E6 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		18A076921CD32F1E008F9558 /* Frame+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A076911CD32F1E008F9558 /* Frame+Define.swift */; };
 		18A076941CD35265008F9558 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A076931CD35265008F9558 /* SocketViewController.swift */; };
 		18A076961CD35C87008F9558 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A076951CD35C87008F9558 /* SocketClient.swift */; };
+		18D1F0141CE4264B00CD9915 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1F0131CE4264B00CD9915 /* ClientViewController.swift */; };
 		DFCB5A06838FC5C593CABCC2 /* Pods_coreFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F112521813A6213DF0AA759 /* Pods_coreFrame.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,7 @@
 		185461C91CD308CC00D5C66B /* CrashTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashTestController.swift; sourceTree = "<group>"; };
 		1861FF001CD8D73B00ECD4A1 /* TableViewSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSourceController.swift; sourceTree = "<group>"; };
 		1861FF041CD8D9F600ECD4A1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		186E43F11CE68F9800AA4685 /* LayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		1899FF2B1CD2EEB8006963E6 /* coreFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1899FF2E1CD2EEB8006963E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1899FF301CD2EEB8006963E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		18A076931CD35265008F9558 /* SocketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		18A076951CD35C87008F9558 /* SocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
 		18A076971CD3A61D008F9558 /* coreFrame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coreFrame-Bridging-Header.h"; sourceTree = "<group>"; };
+		18D1F0131CE4264B00CD9915 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		1C29BBBFB1012BA70F83A1F1 /* Pods-coreFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coreFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coreFrame/Pods-coreFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		9F112521813A6213DF0AA759 /* Pods_coreFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coreFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9A79180B02D9D8C6D3B2F8 /* Pods-coreFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coreFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-coreFrame/Pods-coreFrame.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				18267CCC1CE2C242009B0A2C /* ChatViewController.swift */,
+				18D1F0131CE4264B00CD9915 /* ClientViewController.swift */,
 			);
 			path = socket;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		185461C81CD308B600D5C66B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				186E43F01CE68F7C00AA4685 /* autolay */,
 				18267CCB1CE2C226009B0A2C /* socket */,
 				1861FEFD1CD8D71400ECD4A1 /* animation */,
 				1861FEFE1CD8D71400ECD4A1 /* component */,
@@ -141,6 +147,14 @@
 			children = (
 			);
 			path = interactive;
+			sourceTree = "<group>";
+		};
+		186E43F01CE68F7C00AA4685 /* autolay */ = {
+			isa = PBXGroup;
+			children = (
+				186E43F11CE68F9800AA4685 /* LayoutViewController.swift */,
+			);
+			path = autolay;
 			sourceTree = "<group>";
 		};
 		1899FF221CD2EEB8006963E6 = {
@@ -454,12 +468,14 @@
 				18267CCD1CE2C242009B0A2C /* ChatViewController.swift in Sources */,
 				1861FF011CD8D73B00ECD4A1 /* TableViewSourceController.swift in Sources */,
 				18A076921CD32F1E008F9558 /* Frame+Define.swift in Sources */,
+				186E43F21CE68F9800AA4685 /* LayoutViewController.swift in Sources */,
 				1817F7E91CDAEC3C001509AE /* NaviViewController.swift in Sources */,
 				18A076961CD35C87008F9558 /* SocketClient.swift in Sources */,
 				185461CA1CD308CC00D5C66B /* CrashTestController.swift in Sources */,
 				1899FF2F1CD2EEB8006963E6 /* AppDelegate.swift in Sources */,
 				1861FF051CD8D9F600ECD4A1 /* TableViewController.swift in Sources */,
 				1899FF371CD2EEB8006963E6 /* coreFrame.xcdatamodeld in Sources */,
+				18D1F0141CE4264B00CD9915 /* ClientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

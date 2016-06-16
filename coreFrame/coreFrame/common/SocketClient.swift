@@ -11,7 +11,7 @@ import CocoaAsyncSocket
 
 protocol SocketClientDelegate {
     func didConnectWithError(error:NSError) -> Void
-    func didConnetcToHost(host:String, port:UInt16) -> Void
+    func didConnectToHost(host:String, port:UInt16) -> Void
     func didReceiveData(data:NSData, tag:UInt) -> Void
     
 }
@@ -31,11 +31,13 @@ class SocketClient: NSObject{
     }
     
     func connectWithHost(hostName:String, port:UInt16) -> Void{
-        do {
-            try _asyncSocket?.connectToHost(hostName, onPort: port)
+        if !((_asyncSocket?.isConnected)!) {
+            do {
+                try _asyncSocket?.connectToHost(hostName, onPort: port)
             
-        } catch let error as NSError{
-            print("服务器返回错误：\(error)")
+            } catch let error as NSError{
+                print("服务器返回错误：\(error)")
+            }
         }
 
     }
@@ -47,6 +49,7 @@ class SocketClient: NSObject{
     func isConnected() -> Bool {
         return (_asyncSocket?.isConnected)!
     }
+ 
     
     func  readDataWithTimeOut(timeout:NSTimeInterval,tag:Int) -> Void {
         _asyncSocket?.readDataWithTimeout(timeout, tag: tag)
